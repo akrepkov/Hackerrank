@@ -1,0 +1,23 @@
+The line **if __name__ == '__main__'** checks whether the Python file is being run as the main program or being imported as a module in another script. 
+When a Python file is imported as a module, you typically don't want 
+the script’s top-level code (like test cases, command-line interfaces, or main functions) 
+to execute. By wrapping the execution code inside 
+if __name__ == '__main__':, 
+you ensure that it only runs when the script is executed directly, not when imported.
+
+
+A Python list(array) is a built-in data structure in Python that can store elements 
+of different data types (e.g., integers, strings, objects).
+NumPy arrays are designed for numerical operations and can perform complex mathematical computations efficiently.
+Task is to print a reversed NumPy array with the element type float.
+```
+import numpy
+def arrays(arr):
+    a = numpy.array(arr, float)[::-1]
+    return a
+
+str = '1 2 3 4 -8 -10'
+arr = str.strip().split(' ')
+result = arrays(arr)
+print(result)
+```
